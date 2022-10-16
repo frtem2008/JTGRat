@@ -117,7 +117,7 @@ public class Config {
                 else
                     toParse = users.get(i - 1) + "|" + users.get(i); //parsing by nick
 
-                return parse(readFile(new File(configFolder + getProperty(getConfigFile(), "userinfopath"))), toParse);
+                return parse(readFile(new File(getProperty(getConfigFile(), "userinfopath"))), toParse);
             }
         }
         return getProperty(getConfigFile(), "nouserfoundtext");

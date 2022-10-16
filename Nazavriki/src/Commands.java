@@ -148,12 +148,11 @@ public class Commands {
 
     //info response
     public String getInfoCommand(Message inMess) {
-        System.out.println("Getting info for");
         String textMsg = inMess.getText();
         if (textMsg.equals("/info")) {
             return config.getUsers().toString();
         } else {
-            System.out.println("Getting info for " + textMsg);
+            System.out.println("[INFO]Getting info for " + textMsg);
             textMsg = textMsg.replace("/info @", "");
             textMsg = textMsg.replace("/info ", "");
             return config.getUserInfo(textMsg);
